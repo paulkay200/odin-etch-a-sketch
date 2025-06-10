@@ -16,3 +16,36 @@ body {
     font-family: sans-serif;
     background-color: #c8d8c938;
 }
+
+.title-name {
+    font-size: 2.1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align: center;
+    padding: 1.5rem 0 0 0;
+}
+
+.box-content {
+    background-color: rgb(209, 209, 182);
+    padding: 1.2rem;
+    width: 550px;
+    margin: 1.6% auto;
+    border: 1px solid;
+    text-align: center;
+}
+
+.prompt {
+    font-size: 1.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.input-number {
+    width: 250px;
+    height: 30px;
+}
+
+.input-number:hover {
+    background-color: rgb(233, 232, 225);
+    transition: background-color 0.9s;
+}
