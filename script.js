@@ -40,3 +40,21 @@ btn.addEventListener("click", function () {
   inputNumber.focus({ preventScroll: true });
 
 });
+
+function randomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+
+  return `rgb(${r}, ${g}, ${b})`
+}
+
+container.addEventListener("mouseover", function (event) {
+
+  if (!inputNumber.value || inputNumber.value <= 0 || inputNumber.value >= 101) {
+    event.target.style.backgroundColor = "";
+  } else {
+    event.target.style.backgroundColor = randomColor();
+  }
+
+});
