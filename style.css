@@ -49,3 +49,54 @@ body {
     background-color: rgb(233, 232, 225);
     transition: background-color 0.9s;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+.reset-btn,
+.erase-btn {
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    margin-bottom: 22px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.reset-btn:hover,
+.erase-btn:hover {
+    background-color: rgb(197, 204, 202);
+    transition: background-color 0.2s;
+}
+
+.current-grid-square {
+    text-align: center;
+}
+
+.error-message {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    height: 550px;
+    background-color: lightgrey;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.square {
+    border: 1px solid black;
+}
+
+footer {
+    padding: 17px;
+    text-align: center;
+    background-color: blanchedalmond;
+}
