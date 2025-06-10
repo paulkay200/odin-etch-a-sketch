@@ -58,3 +58,10 @@ container.addEventListener("mouseover", function (event) {
   }
 
 });
+
+container.addEventListener("mouseleave", function (event) {
+
+  if (!inputNumber.value) {
+    event.target.style.backgroundColor = "";
+  }
+});
