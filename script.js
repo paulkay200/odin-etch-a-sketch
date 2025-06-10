@@ -65,3 +65,15 @@ container.addEventListener("mouseleave", function (event) {
     event.target.style.backgroundColor = "";
   }
 });
+
+erase.addEventListener("click", function () {
+
+  inputNumber.focus({ preventScroll: true });
+
+  const squares = container.querySelectorAll(".square");
+
+  squares.forEach(function (grid) {
+    grid.style.backgroundColor = "";
+  });
+
+});
