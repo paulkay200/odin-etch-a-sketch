@@ -16,3 +16,27 @@ function createSquare(gridSize) {
     container.appendChild(square);
   }
 }
+
+btn.addEventListener("click", function () {
+
+  erase.disabled = false;
+
+  container.textContent = "";
+
+  btn.disabled = true;
+
+  let userInput = parseInt(inputNumber.value);
+
+  if (userInput >= 1 && userInput <= 100) {
+    createSquare(userInput);
+    errorMessage.textContent = "";
+    currentGridSquare.textContent = `The current grid size is ${userInput} * ${userInput}. To change the grid size, Re-enter a number between 1 and 100.`
+
+  } else {
+    currentGridSquare.textContent = "";
+    errorMessage.textContent = "Please enter a number between 1 and 100.";
+  }
+
+  inputNumber.focus({ preventScroll: true });
+
+});
