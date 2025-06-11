@@ -20,16 +20,12 @@ function createSquare(gridSize) {
 
 inputNumber.addEventListener("input", function () {
 
-  const value = inputNumber.value.trim();
-  const number = Number(value);
-
   if (
-    value === "" ||
-    isNaN(number) ||
-    number < 1 ||
-    number > 100 ||
-    value === initialValue
-  ) {
+    inputNumber.value === "" ||
+    inputNumber.value < 1 ||
+    inputNumber.value > 100 ||
+    inputNumber.value === initialValue)
+   {
     btn.disabled = true;
   } else {
     btn.disabled = false;
