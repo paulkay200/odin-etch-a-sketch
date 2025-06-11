@@ -3,6 +3,7 @@ const btn = document.querySelector(".reset-btn");
 const erase = document.querySelector(".erase-btn");
 const inputNumber = document.querySelector(".input-number");
 const currentGridSquare = document.querySelector(".current-grid-square");
+const clearGridMessage = document.querySelector(".clear-grid-message")
 const errorMessage = document.querySelector(".error-message");
 
 let initialValue;
@@ -29,8 +30,6 @@ inputNumber.addEventListener("input", function () {
 
 btn.addEventListener("click", function () {
 
-  erase.disabled = false;
-
   container.textContent = "";
 
   btn.disabled = true;
@@ -44,6 +43,7 @@ btn.addEventListener("click", function () {
 
   } else {
     currentGridSquare.textContent = "";
+    erase.disabled = true;
     errorMessage.textContent = "Please enter a number between 1 and 100.";
   }
 
@@ -65,6 +65,7 @@ container.addEventListener("mouseover", function (event) {
     event.target.style.backgroundColor = "";
   } else {
     event.target.style.backgroundColor = randomColor();
+    erase.disabled = false;
   }
 
 });
@@ -72,6 +73,7 @@ container.addEventListener("mouseover", function (event) {
 container.addEventListener("mouseleave", function (event) {
 
   if (!inputNumber.value) {
+
     event.target.style.backgroundColor = "";
   }
 });
@@ -84,6 +86,7 @@ erase.addEventListener("click", function () {
 
   squares.forEach(function (grid) {
     grid.style.backgroundColor = "";
+    erase.disabled = true;
   });
 
 });
