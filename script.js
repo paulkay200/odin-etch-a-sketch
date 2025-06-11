@@ -22,8 +22,6 @@ inputNumber.addEventListener("input", function () {
 
   if (inputNumber.value !== initialValue) {
     btn.disabled = false;
-  } else {
-    //btn.disabled = true;
   }
 
 });
