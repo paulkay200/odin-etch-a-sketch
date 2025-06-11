@@ -76,6 +76,11 @@ body {
     text-align: center;
 }
 
+.clear-grid-message {
+    text-align: center;
+     margin-top: 5px;
+}
+
 .error-message {
     text-align: center;
     margin-bottom: 22px;

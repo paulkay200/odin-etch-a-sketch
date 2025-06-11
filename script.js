@@ -3,7 +3,7 @@ const btn = document.querySelector(".reset-btn");
 const erase = document.querySelector(".erase-btn");
 const inputNumber = document.querySelector(".input-number");
 const currentGridSquare = document.querySelector(".current-grid-square");
-const clearGridMessage = document.querySelector(".clear-grid-message")
+const clearGridMessage = document.querySelector(".clear-grid-message");
 const errorMessage = document.querySelector(".error-message");
 
 let initialValue;
@@ -23,7 +23,7 @@ inputNumber.addEventListener("input", function () {
   if (inputNumber.value !== initialValue) {
     btn.disabled = false;
   } else {
-    btn.disabled = true;
+    //btn.disabled = true;
   }
 
 });
@@ -39,10 +39,12 @@ btn.addEventListener("click", function () {
   if (userInput >= 1 && userInput <= 100) {
     createSquare(userInput);
     errorMessage.textContent = "";
-    currentGridSquare.textContent = `The current grid size is ${userInput} * ${userInput}. To change the grid size, Re-enter a number between 1 and 100.`
+    currentGridSquare.textContent = `The current grid size is ${userInput} * ${userInput}. To change the grid size, Re-enter a number between 1 and 100 and click "Reset Grid".`
+    clearGridMessage.textContent = `Want to start over? Click "Clear Grid" to clear all colors from the grid when hovering over grid.`;
 
   } else {
     currentGridSquare.textContent = "";
+    clearGridMessage.textContent = "";
     erase.disabled = true;
     errorMessage.textContent = "Please enter a number between 1 and 100.";
   }
