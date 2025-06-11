@@ -43,6 +43,7 @@ body {
 .input-number {
     width: 250px;
     height: 30px;
+    text-align: center;
 }
 
 .input-number:hover {
