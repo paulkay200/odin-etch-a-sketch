@@ -6,8 +6,6 @@ const currentGridSquare = document.querySelector(".current-grid-square");
 const clearGridMessage = document.querySelector(".clear-grid-message");
 const errorMessage = document.querySelector(".error-message");
 
-let initialValue = 101;
-
 function createSquare(gridSize) {
   for (let i = 0; i < gridSize * gridSize; i++) {
     const square = document.createElement("div");
@@ -23,8 +21,8 @@ inputNumber.addEventListener("input", function () {
   if (
     inputNumber.value === "" ||
     inputNumber.value < 1 ||
-    inputNumber.value > 100 ||
-    inputNumber.value === initialValue)
+    inputNumber.value > 100
+    )
    {
     btn.disabled = true;
   } else {
